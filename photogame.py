@@ -31,5 +31,12 @@ btn9.grid(row=2,column=4,padx=5,pady=5)
 btn10.grid(row=2,column=5,padx=5,pady=5)
 
 
-img1=ImageTK.PhotoImage(Image.open("coke1.jpg"))
+img1=Image.TK.PhotoImage(Image.open("coke11.jpg"))
+img2=Image.TK.PhotoImage(Image.open("fanta1.png"))
+img3=Image.TK.PhotoImage(Image.open("peper1.png"))
+img4=Image.TK.PhotoImage(Image.open("pepsi1.jpg"))
+img5=Image.TK.PhotoImage(Image.open("sprite1.jpg"))
+
+
+
 photogame.mainloop()
