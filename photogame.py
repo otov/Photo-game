@@ -1,23 +1,55 @@
 from tkinter import*
 from PIL import ImageTk, Image
+from tkinter import messagebox
 import random
 photogame=Tk()
 
+
 photogame.title("Image game")
 
-bckimg=ImageTk.PhotoImage(Image.open("bckimg.jpg"))
 
-btn1=Button(width=100,height=80,image=bckimg,bd=5)
-btn2=Button(width=100,height=80,image=bckimg,bd=5)
-btn3=Button(width=100,height=80,image=bckimg,bd=5)
-btn4=Button(width=100,height=80,image=bckimg,bd=5)
+bckimg=ImageTk.PhotoImage(Image.open("bckimage1.jpg"))
 
-btn5=Button(width=100,height=80,image=bckimg,bd=5)
-btn6=Button(width=100,height=80,image=bckimg,bd=5)
-btn7=Button(width=100,height=80,image=bckimg,bd=5)
-btn8=Button(width=100,height=80,image=bckimg,bd=5)
-btn9=Button(width=100,height=80,image=bckimg,bd=5)
-btn10=Button(width=100,height=80,image=bckimg,bd=5)
+count=0
+correctAnswer=0
+answers=[]
+answer_dict={}
+
+
+def btnclick(btn,number):
+    global count,correctAnswer,answers,answer_dict
+    if btn["image"]=="pyimage1"and count<2:
+        btn["image"]=Imagelist[number]
+        count+=1
+        answers.append(number)
+        answer_dict[btn]=Imagelist[number]
+    if len(answers)==0:
+        if Imagelist[answers[0]]==Imagelist[answers[1]]:
+            for key in answer_dict:
+                key["state"]=DISABLED
+            if correctAnswer==2:
+                messagebox.showinfo("Matching images, CONGRATS!")
+            else:
+                messagebox.showinfo("NOT matching images, IDIOT!")
+                for key in answer_dict:
+                    key["Image"]="pyimage6"
+                count=0
+                answers=[]
+                answer_dict={}
+
+    return 0
+
+btn1=Button(width=100,height=80,image=bckimg,bd=2,command=lambda:btnclick(btn1,1))
+btn2=Button(width=100,height=80,image=bckimg,bd=2,command=lambda:btnclick(btn2,2))
+btn3=Button(width=100,height=80,image=bckimg,bd=2,command=lambda:btnclick(btn3,3))
+btn4=Button(width=100,height=80,image=bckimg,bd=2,command=lambda:btnclick(btn4,4))
+btn5=Button(width=100,height=80,image=bckimg,bd=2,command=lambda:btnclick(btn5,5))
+
+btn6=Button(width=100,height=80,image=bckimg,bd=2,command=lambda:btnclick(btn6,6))
+btn7=Button(width=100,height=80,image=bckimg,bd=2,command=lambda:btnclick(btn7,7))
+btn8=Button(width=100,height=80,image=bckimg,bd=2,command=lambda:btnclick(btn8,8))
+btn9=Button(width=100,height=80,image=bckimg,bd=2,command=lambda:btnclick(btn9,9))
+btn10=Button(width=100,height=80,image=bckimg,bd=2,command=lambda:btnclick(btn10,10))
 
 
 btn1.grid(row=1,column=1,padx=2,pady=2)
@@ -44,5 +76,9 @@ img2=ImageTk.PhotoImage(Image.open("fanta1.jpg").resize((200,200)))
 img3=ImageTk.PhotoImage(Image.open("peper1.jpg").resize((200,200)))
 img4=ImageTk.PhotoImage(Image.open("pepsi1.jpg").resize((200,200)))
 img5=ImageTk.PhotoImage(Image.open("sprite1.jpg").resize((200,200)))
+
+
+Imagelist=[img1,img1,img2,img2,img3,img3,img4,img4,img5,img5]
+random.shuffle(Imagelist)
 
 photogame.mainloop()
