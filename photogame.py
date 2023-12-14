@@ -39,17 +39,17 @@ def btnclick(btn,number):
 
     return 0
 
-btn1=Button(width=100,height=80,image=bckimg,bd=2,command=lambda:btnclick(btn1,1))
-btn2=Button(width=100,height=80,image=bckimg,bd=2,command=lambda:btnclick(btn2,2))
-btn3=Button(width=100,height=80,image=bckimg,bd=2,command=lambda:btnclick(btn3,3))
-btn4=Button(width=100,height=80,image=bckimg,bd=2,command=lambda:btnclick(btn4,4))
-btn5=Button(width=100,height=80,image=bckimg,bd=2,command=lambda:btnclick(btn5,5))
+btn1=Button(width=150,height=150,image=bckimg,bd=2,command=lambda:btnclick(btn1,1))
+btn2=Button(width=150,height=150,image=bckimg,bd=2,command=lambda:btnclick(btn2,2))
+btn3=Button(width=150,height=150,image=bckimg,bd=2,command=lambda:btnclick(btn3,3))
+btn4=Button(width=150,height=150,image=bckimg,bd=2,command=lambda:btnclick(btn4,4))
+btn5=Button(width=150,height=150,image=bckimg,bd=2,command=lambda:btnclick(btn5,5))
 
-btn6=Button(width=100,height=80,image=bckimg,bd=2,command=lambda:btnclick(btn6,6))
-btn7=Button(width=100,height=80,image=bckimg,bd=2,command=lambda:btnclick(btn7,7))
-btn8=Button(width=100,height=80,image=bckimg,bd=2,command=lambda:btnclick(btn8,8))
-btn9=Button(width=100,height=80,image=bckimg,bd=2,command=lambda:btnclick(btn9,9))
-btn10=Button(width=100,height=80,image=bckimg,bd=2,command=lambda:btnclick(btn10,10))
+btn6=Button(width=150,height=150,image=bckimg,bd=2,command=lambda:btnclick(btn6,6))
+btn7=Button(width=150,height=150,image=bckimg,bd=2,command=lambda:btnclick(btn7,7))
+btn8=Button(width=150,height=150,image=bckimg,bd=2,command=lambda:btnclick(btn8,8))
+btn9=Button(width=150,height=150,image=bckimg,bd=2,command=lambda:btnclick(btn9,9))
+btn10=Button(width=150,height=150,image=bckimg,bd=2,command=lambda:btnclick(btn10,10))
 
 
 btn1.grid(row=1,column=1,padx=2,pady=2)
@@ -74,7 +74,7 @@ img5=ImageTk.PhotoImage(Image.open("sprite1.jpg"))
 img1=ImageTk.PhotoImage(Image.open("coke11.jpg").resize((200,200)))
 img2=ImageTk.PhotoImage(Image.open("fanta1.jpg").resize((200,200)))
 img3=ImageTk.PhotoImage(Image.open("peper1.jpg").resize((200,200)))
-img4=ImageTk.PhotoImage(Image.open("pepsi1.jpg").resize((200,200)))
+img4=ImageTk.PhotoImage(Image.open("pepsi1.jpg").resize((500,200)))
 img5=ImageTk.PhotoImage(Image.open("sprite1.jpg").resize((200,200)))
 
 
