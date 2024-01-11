@@ -48,10 +48,12 @@ def btnclick(btn,number):
 def infowindow():
     photogame=Toplevel()
     photogame.title("Rules")
-    photogame.geometry("500x500")
-    Rules=Label(photogame,text="Game rules")
+    photogame.geometry("600x200")
+    Rules=Label(photogame,text="Game rules",font="Helvica 40 bold")
     Rules.grid(row=0,column=0)
-
+    Rules=Label(photogame,text="The game consists of 10 buttons and each button reveals one picture when clicked.",font="Helvica 12")
+    Rules.grid(row=1,column=0)
+    
     return 0
 
 def reset():
